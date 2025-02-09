@@ -4,10 +4,10 @@ from astrbot.api.message_type import MessageType
 import requests
 import json
 
-API_URL = "http://117.72.95.35/v1/chat/completions"
+API_URL = "http://your-server-ip/v1/chat/completions"
 headers = {
     "Content-Type": "application/json", 
-    "Authorization": "Bearer MJJ"
+    "Authorization": "Bearer yourpassword"
 }
 
 @register("claude", "Your Name", "Claude AI 对话插件", "1.0.0", "https://github.com/qq254950134/astrbot_plugin_cursor")
