@@ -1,5 +1,6 @@
-from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult, EventMessageType
+from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
 from astrbot.api.star import Context, Star, register
+from astrbot.api.message_type import MessageType
 import requests
 import json
 
@@ -9,7 +10,7 @@ headers = {
     "Authorization": "Bearer MJJ"
 }
 
-@register("claude", "Your Name", "Claude AI 对话插件", "1.0.0", "你的插件仓库URL")
+@register("claude", "Your Name", "Claude AI 对话插件", "1.0.0", "https://github.com/qq254950134/astrbot_plugin_cursor")
 class ClaudePlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
@@ -45,7 +46,7 @@ class ClaudePlugin(Star):
         response = await self.chat_with_model(question)
         yield event.plain_result(response)
         
-    @filter.event_message_type(EventMessageType.ALL)  
+    @filter.message_type(MessageType.ALL)
     async def on_message(self, event: AstrMessageEvent):
         """处理所有消息"""
         if event.is_at_me():
