@@ -1,4 +1,4 @@
-# AstrBot Claude AI 插件
+# AstrBot cursor AI 插件
 
 一个支持多种 AI 模型的 AstrBot 对话插件，支持 Claude、GPT-4、Gemini 等多种模型。
 
@@ -16,13 +16,12 @@
 
 ## 安装方法
 
-1. 克隆仓库：bash cd /path/to/AstrBot/data/plugins/
-git clone https://github.com/qq254950134/astrbot_plugin_cursor.git
+1. 克隆仓库：git clone https://github.com/qq254950134/astrbot_plugin_cursor.git
 
 2. 修改配置：
 打开 `main.py`，修改以下配置：
-API_URL = "http://your-api-url/v1/chat/completions"
-"Authorization": "Bearer YOUR_TOKEN" # 替换为您的 token
+API_URL = "http://your-api-url/v1/chat/completions" # 此处修改your-api-url 为你部署好的cursorapi地址
+"Authorization": "Bearer YOUR_TOKEN" # 替换为您的 token令牌
 3. 安装插件后自动重启 AstrBot 即可使用
 
 ## 使用方法
@@ -121,4 +120,4 @@ MJJ
 
 - [GitHub 仓库](https://github.com/qq254950134/astrbot_plugin_cursor)
 - [AstrBot 官网](https://astrbot.app/)
-- - [cursor-api](https://github.com/wisdgod/cursor-api)
+- [cursor-api](https://github.com/wisdgod/cursor-api)
